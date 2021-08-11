@@ -1,40 +1,52 @@
 #elemento{
     display:flex;
-    background-color: skyblue;
+    background-color: rgb(51, 0, 145);
+    height: 300px;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
 
 }
 
-#elemento>div {
-    width: 50%;
+#elemento div {
+    width: 80px;
     height: 70px;
     background-color: rgb(96, 239, 244);
     
 }
     
-#elemento2{
-    display:flex;
-    background-color: rgb(255, 0, 0);
-    flex-direction: row-reverse;
+#elemento div:nth-child(2) {
+    padding-top: 100px;
+    order: 5;
+}
+#elemento div:nth-child(3) {
+    padding-bottom: 100px;
+    order: -100;
 }
 
-#elemento2>div {
-    width: 200px;
+#elemento div:nth-child(4) {
+    align-self: flex-end;
+    order: 1;
+}
+
+#elemento2 div {
+    width: 80px;
     height: 70px;
-    background-color: rgb(29, 95, 133);
+    background-color: rgb(131, 133, 29);
 }
 
 #elemento3{
     display:flex;
-    background-color: rgb(146, 78, 78);
+    background-color: rgb(80, 146, 78);
     flex-direction: column;
+    align-items: center;
 }
 
 #elemento3 div {
-    width: 200px;
+    width: 80px;
     height: 70px;
-    background-color: rgb(29, 95, 133);
+    background-color: rgb(133, 29, 93);
 }
 #elemento4{
     display:flex;
@@ -47,3 +59,14 @@
     height: 70px;
     background-color: rgb(133, 126, 29);
 }
+#grid{
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows: 100px 500px;
+    gap: 25px 30px;
+}
+
+#grid>* {
+    border:1px solid black;
+}
+
